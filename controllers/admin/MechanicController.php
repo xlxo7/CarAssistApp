@@ -8,8 +8,9 @@ class MechanicController
 
     public function __construct()
     {
-        session_start();
-        $this->conn = Database::getInstance()->getConnection();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }        $this->conn = Database::getInstance()->getConnection();
     }
 
     public function getApprovedMechanics(): array
