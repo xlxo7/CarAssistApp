@@ -2,11 +2,11 @@
 
 require_once __DIR__ . '/../../config/Database.php';
 
-class AdminDashboardController()
+class AdminDashboardController
 {
     private mysqli $conn;
 
-    public function __construct
+    public function __construct()
     {
         $this->conn = Database::getInstance()->getConnection();
     }
