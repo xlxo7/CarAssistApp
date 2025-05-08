@@ -2,7 +2,6 @@
 session_start();
 include('../../../../includes/layout/header.php');
 
-BIBZ TOP WL BA2I CROP TOPPPPP
 // السماح فقط للميكانيكي
 if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'mechanic') {
     header("Location: ../../../auth/login/login.php");
